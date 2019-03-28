@@ -247,15 +247,15 @@ header.navigation:before {
   font-size: 1.6rem;
   padding: 20px;
 }
-.home main {
+.home .content-main {
   padding-bottom: 15px;
   margin-bottom: 15px;
   border-bottom: 2px dashed #C0C0C0;
 }
-.home main h1 {
+.home .content-main h1 {
   margin-bottom: 15px;
 }
-.home main .hero {
+.home .content-main .hero {
   margin-bottom: 20px;
 }
 .home .content-section {
@@ -315,5 +315,33 @@ header.navigation:before {
   background-color: #008080;
   color: white;
   width: 80%;
+}
+@media (max-width: 500px) {
+  .home [class^="content-"] {
+    padding: 0 25px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .home [class^="content-"].inverse-content {
+    flex-direction: column-reverse;
+    padding-bottom: 30px;
+  }
+  .home [class^="content-"] .text-content {
+    width: 100%;
+  }
+  .home [class^="content-"] .img-content {
+    width: 100%;
+    text-align: center;
+  }
+  .home [class^="content-"] .destination {
+    margin-top: 30px;
+    width: 80%;
+    align-self: center;
+  }
+  .home [class^="content-"] .destination .btn {
+    margin: 0 auto;
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=index.css.map */
