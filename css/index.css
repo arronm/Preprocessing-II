@@ -208,6 +208,21 @@ header.navigation nav a:hover {
 header.navigation .logo {
   font-size: 4rem;
   font-family: 'Indie Flower', cursive;
+  animation-name: pulse;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-duration: 3s;
+}
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  to {
+    transform: scale3d(1, 1, 1);
+  }
 }
 @media (max-width: 500px) {
   header.navigation .logo {
