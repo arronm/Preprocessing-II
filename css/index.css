@@ -177,11 +177,23 @@ header.navigation {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 500px) {
+  header.navigation {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+}
 header.navigation nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 15px;
+}
+@media (max-width: 500px) {
+  header.navigation nav {
+    width: 100%;
+    padding: 0 40px;
+  }
 }
 header.navigation nav a {
   font-size: 1.6rem;
@@ -197,23 +209,32 @@ header.navigation .logo {
   font-size: 4rem;
   font-family: 'Indie Flower', cursive;
 }
+@media (max-width: 500px) {
+  header.navigation .logo {
+    font-size: 3rem;
+    margin: 10px 0;
+  }
+}
+header.navigation:before,
 header.navigation:after {
   content: "";
   border-bottom: 2px dashed #C0C0C0;
   position: absolute;
-  right: -15%;
   bottom: -2px;
-  width: 14.7%;
+  width: 14.7vw;
   height: 100%;
 }
+@media (max-width: 1024px) {
+  header.navigation:before,
+  header.navigation:after {
+    display: none;
+  }
+}
+header.navigation:after {
+  right: -15%;
+}
 header.navigation:before {
-  content: "";
-  border-bottom: 2px dashed #C0C0C0;
-  position: absolute;
   left: -15%;
-  bottom: -2px;
-  width: 14.7%;
-  height: 100%;
 }
 .footer {
   width: 100%;
