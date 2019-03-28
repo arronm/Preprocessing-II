@@ -1,1 +1,50 @@
 // Navigation Styles here
+header.navigation {
+  position: relative;
+  border-bottom: 2px dashed @navigation-border;
+
+  padding: 25px 0;
+  .flex(space-between, center);
+
+  nav {
+    .flex(space-between, center);
+    margin: 0 15px;
+  }
+  
+  nav a {
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0 15px;
+    color: @font-color;
+
+    &:hover {
+      color: lighten(@font-color, 25);
+    }
+  }
+  
+  .logo {
+    font-size: 4rem;
+    font-family: 'Indie Flower', cursive;
+  }
+
+  &:after {
+    content: "";
+    border-bottom: 2px dashed @navigation-border;
+    position: absolute;
+    right: -15%;
+    bottom: -2px;
+    width: 14.7%;
+    height: 100%;
+  }
+
+  &:before {
+    content: "";
+    border-bottom: 2px dashed @navigation-border;
+    position: absolute;
+    left: -15%;
+    bottom: -2px;
+    width: 14.7%;
+    height: 100%;
+  }
+}

@@ -135,6 +135,7 @@ html {
 html,
 body {
   font-family: 'Roboto', sans-serif;
+  color: #212529;
 }
 h1,
 h2,
@@ -168,8 +169,51 @@ img {
   width: 100%;
   margin: 0 auto;
 }
-body {
-  background: red;
+header.navigation {
+  position: relative;
+  border-bottom: 2px dashed #C0C0C0;
+  padding: 25px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header.navigation nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 15px;
+}
+header.navigation nav a {
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0 15px;
+  color: #212529;
+}
+header.navigation nav a:hover {
+  color: #5a6570;
+}
+header.navigation .logo {
+  font-size: 4rem;
+  font-family: 'Indie Flower', cursive;
+}
+header.navigation:after {
+  content: "";
+  border-bottom: 2px dashed #C0C0C0;
+  position: absolute;
+  right: -15%;
+  bottom: -2px;
+  width: 14.7%;
+  height: 100%;
+}
+header.navigation:before {
+  content: "";
+  border-bottom: 2px dashed #C0C0C0;
+  position: absolute;
+  left: -15%;
+  bottom: -2px;
+  width: 14.7%;
+  height: 100%;
 }
 .footer {
   width: 100%;
@@ -228,3 +272,4 @@ body {
   width: 30%;
   margin-bottom: 30px;
 }
+/*# sourceMappingURL=index.css.map */
