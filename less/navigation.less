@@ -1,1 +1,62 @@
 // Navigation Styles here
+header.navigation {
+  padding: 25px 0;
+  .flex(space-between, center);
+
+  @media @phone {
+    flex-direction: column;
+    padding: 10px 0;
+  }
+
+  nav {
+    .flex(space-between, center);
+    margin: 0 15px;
+
+    @media @phone {
+      width: 100%;
+      padding: 0 40px;
+    }
+  }
+  
+  nav a {
+    font-size: 1.6rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0 15px;
+    color: @font-color;
+
+    &:hover {
+      color: lighten(@font-color, 25);
+    }
+  }
+  
+  .logo {
+    font-size: 4rem;
+    font-family: 'Indie Flower', cursive;
+
+    .animatePulse(ease-in-out, 3s);
+
+    @media @phone {
+      font-size: 3rem;
+      margin: 10px 0;
+    }
+  }
+
+  &:after {
+    content: "";
+    border-bottom: 2px dashed @navigation-border;
+    position: absolute;
+    top: -2px;
+    width: 100%;
+    height: 90px;
+    left: 0;
+
+    @media( max-width: 500px ) {
+      height:86px;
+    }
+  }
+
+  &:after {
+    right: -15%;
+  }
+}

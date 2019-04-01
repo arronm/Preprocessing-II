@@ -1,4 +1,17 @@
 .home {
+  .content-main {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 2px dashed @navigation-border;
+
+    h1 {
+      margin-bottom: 15px;
+    }
+
+    .hero {
+      margin-bottom: 20px;
+    }
+  }
 
   .content-section {
     margin: 30px 0;
@@ -6,8 +19,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
-    
     .text-content {
       width: 48%;
       padding-right: 1%;
@@ -56,6 +67,45 @@
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      .btn {
+        .button(15px, #008080, white);
+        width: 80%;
+      }
+    }
+  }
+
+  @media @phone {
+    [class^="content-"] {
+      padding: 0 25px;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+      &.inverse-content {
+        flex-direction: column-reverse;
+        padding-bottom: 30px;
+      }
+
+      .text-content {
+        width: 100%;
+      }
+
+      .img-content {
+        width: 100%;
+        text-align: center;
+      }
+
+      .destination {
+        margin-top: 30px;
+        width: 80%;
+        align-self: center;
+
+        .btn {
+          margin: 0 auto;
+          width: 100%;
+        }
+      }
     }
   }
 }// home
